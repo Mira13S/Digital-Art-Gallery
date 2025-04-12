@@ -59,12 +59,11 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Roboto", "Droid Sans", "Chilanka"],
+        families: ["Roboto", "Droid Sans", "Chilanka", "Poppins:400,500,600"]
       },
     });
 
     store.dispatch(loadUser());
-
     getStripeApiKey();
   }, []);
 

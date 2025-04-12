@@ -27,14 +27,14 @@ const Home = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="OAGMS" />
+          <MetaData title="ArtVista" />
           <div className="banner">
-            <p>Welcome to OAGMS</p>
+            <p>Welcome to ArtVista</p>
             <h1>BEST HANDPICKED ARTS ARE AWAITING YOU</h1>
 
             <a href="#container">
               <button>
-                Scroll <CgMouse />
+                Scroll 
               </button>
             </a>
           </div>

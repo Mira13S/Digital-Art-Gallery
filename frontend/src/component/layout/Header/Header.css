@@ -1,3 +1,160 @@
+/* Navbar Container */
+.ReactNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.ReactNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vmax 4vmax;
+}
+
+.ReactNavbar > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vmax;
+}
+
+.ReactNavbar a,
+.ReactNavbar svg {
+  margin: 0 1vmax !important;
+}
+
+/* Ensure icons container has proper spacing */
+.nav-icons {
+  display: flex;
+  gap: 2vmax;
+  margin-left: auto;
+}
+
+.ReactNavbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(251, 180, 27, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Logo Styles */
+.ReactNavbar img {
+  transition: transform 0.3s ease;
+}
+
+.ReactNavbar img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Links */
+.ReactNavbar a {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.8vmax !important;
+  color: rgba(35, 35, 35, 0.9) !important;
+  margin: 1.2vmax !important;
+  transition: all 0.3s ease !important;
+  font-weight: 600 !important;
+  position: relative !important;
+}
+
+.ReactNavbar a::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -5px !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 3px !important;
+  background: #fbb41b !important;
+  transition: all 0.3s ease !important;
+}
+
+.ReactNavbar a:hover::after {
+  width: 100% !important;
+}
+
+/* Icons */
+.ReactNavbar button svg {
+  font-size: 2.2vmax !important;
+  color: #fbb41b !important;
+  margin: 1.2vmax !important;
+  transition: transform 0.3s ease !important;
+}
+
+.ReactNavbar button:hover svg {
+  transform: scale(1.1) !important;
+  color: #e09701 !important;
+}
+
+/* Remove duplicate styles */
+.nav-links-container a,
+.MdAccountCircle,
+.MdSearch,
+.MdAddShoppingCart {
+  display: none;
+}
+
+.ReactNavbar svg {
+  font-size: 2.2vmax !important;
+  color: #fbb41b !important;
+  margin: 1.2vmax !important;
+  transition: all 0.3s ease !important;
+}
+
+.ReactNavbar svg:hover {
+  color: #e09701 !important;
+  transform: scale(1.1);
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
+  .ReactNavbar a {
+    font-size: 2vmax !important;
+  }
+
+  .ReactNavbar svg {
+    font-size: 2.4vmax !important;
+  }
+}
+
+.nav-links-container a {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.nav-links-container a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #fbb41b;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links-container a:hover::after {
+  width: 100%;
+}
+
+/* Icons */
+.MdAccountCircle,
+.MdSearch,
+.MdAddShoppingCart {
+  transition: transform 0.3s ease;
+}
+
+.MdAccountCircle:hover,
+.MdSearch:hover,
+.MdAddShoppingCart:hover {
+  transform: scale(1.1);
+}
+
+/* SpeedDial */
 .speedDial {
   position: fixed;
   right: 3vmax;
@@ -8,4 +165,96 @@
   width: 56px;
   height: 56px;
   border-radius: 100%;
+  border: 2px solid #fbb41b;
+}
+
+/* Navbar Customization */
+nav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(251, 180, 27, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+  padding: 1vmax 4vmax !important;
+}
+
+.navbar-brand {
+  transition: all 0.3s ease !important;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05) !important;
+}
+
+.nav-link {
+  font-family: "Poppins", sans-serif !important;
+  letter-spacing: 0.5px !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+.nav-link::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: #fbb41b !important;
+  transition: all 0.3s ease !important;
+  transform: translateX(-50%) !important;
+}
+
+.nav-link:hover::after {
+  width: 100% !important;
+}
+
+.menu-icon {
+  transition: all 0.3s ease !important;
+}
+
+.menu-icon:hover {
+  color: #fbb41b !important;
+  transform: scale(1.1) !important;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 2vmax !important;
+  }
+
+  .speedDial {
+    right: 2vmax;
+    top: 2vmax;
+  }
+
+  .speedDialIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Cart Badge */
+.cart-badge {
+  background: #fbb41b !important;
+  color: white !important;
+  font-family: "Poppins", sans-serif !important;
+  border-radius: 50% !important;
+  padding: 0.2vmax 0.5vmax !important;
+  font-size: 0.8vmax !important;
+  position: absolute !important;
+  top: -0.5vmax !important;
+  right: -0.5vmax !important;
+}
+
+/* Search Bar */
+.search-bar {
+  border: 1px solid rgba(251, 180, 27, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 0.5vmax 1vmax !important;
+  transition: all 0.3s ease !important;
+}
+
+.search-bar:focus {
+  border-color: #fbb41b !important;
+  box-shadow: 0 0 5px rgba(251, 180, 27, 0.3) !important;
 }

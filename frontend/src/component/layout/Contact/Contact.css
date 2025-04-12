@@ -1,28 +1,106 @@
 .contactContainer {
   height: 100vh;
-  width: 100vw;
-  max-width: 100%;
-  display: grid;
-  place-items: center;
-  background-color: white;
-  position: fixed;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff8e5 50%, #f8e6c8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mailBtn {
+.contactWrapper {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(251, 180, 27, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 3vmax;
+  text-align: center;
+  max-width: 600px !important;
+}
+
+.contactHeading {
+  color: #333;
+  font: 600 2.5vmax "Poppins" !important;
+  margin-bottom: 3vmax !important;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmax;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vmax;
+}
+
+.contactIcon {
+  color: #fbb41b;
+  font-size: 2vmax !important;
+}
+
+.contactLink, .contactText {
+  color: #666;
   text-decoration: none;
-  transform: translateX(-100vw);
-  animation: mailBtnAnimation 2s forwards;
+  font: 400 1.2vmax "Poppins";
+  margin: 0;
 }
 
-.mailBtn > button {
+.contactLink:hover {
+  color: #fbb41b;
+}
+
+.socialLinks {
+  margin-top: 2vmax;
+  display: flex;
+  justify-content: center;
+  gap: 2vmax;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  gap: 0.5vmax;
+  color: #666;
   text-decoration: none;
-  font: 200 2vmax "Roboto";
-  cursor: url("https://img.icons8.com/color/48/000000/edit--v2.png"), pointer;
-  padding: 2vmax;
+  font: 400 1.2vmax "Poppins";
+  transition: all 0.3s;
 }
 
-@keyframes mailBtnAnimation {
-  to {
-    transform: translateX(0);
+.socialLinks a:hover {
+  color: #fbb41b;
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  font-size: 1.8vmax !important;
+}
+
+@media screen and (max-width: 600px) {
+  .contactWrapper {
+    width: 90%;
+    padding: 4vmax 2vmax;
+  }
+
+  .contactHeading {
+    font-size: 4vmax !important;
+  }
+
+  .contactIcon {
+    font-size: 3vmax !important;
+  }
+
+  .contactLink, .contactText {
+    font-size: 2vmax;
+  }
+
+  .socialLinks {
+    flex-direction: column;
+    gap: 1vmax;
+  }
+
+  .socialIcon {
+    font-size: 2.5vmax !important;
   }
 }

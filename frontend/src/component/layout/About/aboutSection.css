@@ -3,122 +3,191 @@
   width: 100vw;
   max-width: 100%;
   background-color: white;
-  display: grid;
-  grid-template-columns: 4fr 4fr;
-  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutSectionGradient {
   background-image: linear-gradient(
     to bottom right,
-    rgb(78, 81, 255),
-    rgb(74, 137, 189)
+    #fbb41b,
+    #e09701
   );
+  opacity: 0.15;
 }
 
 .aboutSectionContainer {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+  box-shadow: 0 0 20px rgba(251, 180, 27, 0.1);
+}
+
+.aboutSectionContainer > h1 {
+  color: #fbb41b;
+  font: 400 3vmax "Roboto";
+  margin: 2vmax;
+  text-align: center;
+}
+
+.aboutDescription p {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.teamHeading {
+  font: 600 4.5vmax "Roboto";
+  color: #fbb41b !important;
+  text-shadow: 2px 2px 4px rgba(251, 180, 27, 0.1);
+  margin: 3vmax 0;
+  text-align: center;
+}
+
+.teamAvatar {
+  border: 3px solid #fbb41b;
+}
+
+.socialLinks a {
+  color: #fbb41b;
+}
+
+.socialLinks a:hover {
+  color: #e09701;
+  transform: scale(1.1);
+}
+
+.teamMember:hover .teamAvatar {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(251, 180, 27, 0.2);
+}
+
+/* Remove duplicate rules and keep only these updated versions */
+
+.aboutSectionContainer {
+  position: relative;
   background-color: rgb(255, 255, 255);
   width: 80vw;
   height: 80vh;
-  transform: translateX(-50%) translateY(-50%);
-  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.192);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 2vmax;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(251, 180, 27, 0.1);
 }
 
 .aboutSectionContainer > h1 {
   font: 400 3vmax "Roboto";
-  color: tomato;
+  color: #d8980c !important;
   margin: 2vmax;
-}
-
-.aboutSectionContainer > div {
-  display: flex;
-  width: 100%;
-}
-
-.aboutSectionContainer > div > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2vmax;
-  box-sizing: border-box;
-}
-
-.aboutSectionContainer > div > div > p {
-  color: rgba(0, 0, 0, 0.623);
-  font: 100 1vmax "Roboto";
-}
-
-.aboutSectionContainer > div > div > button {
-  margin: 1vmax 0;
-}
-
-.aboutSectionContainer > div > div > span {
-  font: 100 1vmax "Roboto";
-  color: rgba(0, 0, 0, 0.616);
   text-align: center;
-  width: 80%;
 }
 
-.aboutSectionContainer2 {
-  border-left: 1px solid rgba(0, 0, 0, 0.116);
+.teamHeading {
+  font: 600 4.5vmax "Roboto";
+  color: #d8980c !important;
+  margin: 3vmax 0;
+  text-align: center;
 }
 
-.aboutSectionContainer2 > h2 {
-  color: rgba(0, 0, 0, 0.623);
-  font: 100 2vmax "Roboto";
+.teamAvatar {
+  width: 12vmax !important;
+  height: 12vmax !important;
+  border: 3px solid #d8980c !important;
+  transition: all 0.3s;
+}
+
+.socialLinks a {
+  color: #d8980c !important;
+  transition: all 0.3s;
+}
+
+.socialLinks a:hover {
+  color: #e09701 !important;
+  transform: scale(1.1);
+}
+
+.aboutDescription {
+  text-align: center;
   margin: 2vmax;
 }
 
-.aboutSectionContainer2 > a > svg {
-  font-size: 4vmax;
+.aboutDescription p {
+  font: 300 1.2vmax "Roboto";
+  color: rgba(0, 0, 0, 0.7);
 }
 
-.youtubeSvgIcon {
-  color: blue;
+.teamHeading {
+  font: 600 4.5vmax "Roboto";  /* Increased from 3.5vmax */
+  color: rgb(78, 81, 255);
+  margin: 3vmax 0;
+  text-align: center;
 }
 
-.instagramSvgIcon {
-  color: rgb(144, 81, 202);
+.teamContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2vmax;
+}
+
+.teamMember {
+  text-align: center;
+  margin: 2vmax;
+  transition: all 0.3s;
+}
+
+.teamAvatar {
+  width: 12vmax !important;    /* Decreased from 15vmax */
+  height: 12vmax !important;   /* Decreased from 15vmax */
+  border: 3px solid rgb(78, 81, 255);
+  transition: all 0.3s;
+}
+
+.memberName {
+  font: 500 1.5vmax "Roboto" !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  margin: 1vmax 0 !important;
+}
+
+.memberRole {
+  font: 400 1vmax "Roboto" !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1vmax;
+  margin-top: 1vmax;
+}
+
+.socialLinks a {
+  color: rgb(78, 81, 255);
+  transition: all 0.3s;
+}
+
+.socialLinks a:hover {
+  color: rgb(74, 137, 189);
+  transform: scale(1.1);
+}
+
+.teamMember:hover .teamAvatar {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 600px) {
-  .aboutSectionContainer > div {
-    display: block;
+  .aboutSectionContainer {
+    width: 100vw;
+    height: auto;
   }
 
-  .aboutSectionContainer > h1 {
-    font: 400 5vmax "Roboto";
+  .teamContainer {
+    flex-direction: column;
+  }
+
+  .teamMember {
     margin: 3vmax;
   }
 
-  .aboutSectionContainer > div > div > p {
-    font: 100 2vmax "Roboto";
-  }
-
-  .aboutSectionContainer > div > div > span {
-    font: 100 1.4vmax "Roboto";
-    width: 70%;
-  }
-
-  .aboutSectionContainer2 {
-    border-left: none;
-  }
-
-  .aboutSectionContainer2 > h2 {
-    font: 100 3vmax "Roboto";
-    margin: 2vmax;
-  }
-
-  .aboutSectionContainer2 > a > svg {
-    font-size: 6vmax;
-    margin: 1vmax;
+  .teamAvatar {
+    width: 16vmax !important;  /* Decreased from 20vmax */
+    height: 16vmax !important; /* Decreased from 20vmax */
   }
 }

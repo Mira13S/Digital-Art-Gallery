@@ -3,10 +3,6 @@
   scroll-behavior: smooth;
 }
 
-body {
-  cursor: url("./images/testcursor.png"), auto;
-}
-
 /* Custom ScrollBar */
 /* width */
 ::-webkit-scrollbar {
@@ -23,7 +19,7 @@ body {
 ::-webkit-scrollbar-thumb {
   border: 3.5px solid transparent;
   border-radius: 100px;
-  background-color: #ff3737;
+  background-color: #d8980c;
   background-clip: content-box;
 }
 

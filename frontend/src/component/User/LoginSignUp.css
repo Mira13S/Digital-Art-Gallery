@@ -5,42 +5,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(231, 231, 231);
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff8e5 50%, #f8e6c8 100%);
   position: fixed;
   top: 0%;
   left: 0;
 }
 
 .LoginSignUpBox {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.95);
   width: 25vw;
-  height: 70vh;
+  height: 75vh;  /* Reduced height */
   box-sizing: border-box;
   overflow: hidden;
-}
-.login_signUp_toggle {
-  display: flex;
-  height: 3vmax;
-}
-.login_signUp_toggle > p {
-  color: rgba(0, 0, 0, 0.678);
-  font: 300 1vmax "Roboto";
-  transition: all 0.5s;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  width: 100%;
-}
-.login_signUp_toggle > p:hover {
-  color: tomato;
-}
-
-.LoginSignUpBox > div > button {
-  background-color: tomato;
-  height: 3px;
-  width: 50%;
-  border: none;
-  transition: all 0.5s;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(251, 180, 27, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 1vmax 0;  /* Reduced padding */
+  position: relative;
 }
 
 .loginForm,
@@ -49,14 +30,10 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  padding: 2vmax;
-  justify-content: space-evenly;
-  height: 70%;
-  transition: all 0.5s;
-}
-
-.signUpForm {
-  transform: translateY(-100%) translateX(-100vmax);
+  padding: 0.8vmax 2vmax;  /* Reduced padding */
+  justify-content: flex-start;
+  height: 75%;
+  gap: 0.4vmax;  /* Reduced gap between elements */
 }
 
 .loginForm > div,
@@ -64,17 +41,176 @@
   display: flex;
   width: 100%;
   align-items: center;
+  margin: 0.3vmax 0;  /* Reduced margin */
+  position: relative;
 }
+
+#registerImage {
+  margin: 0.3vmax 0;  /* Reduced margin */
+  height: 2.2vmax;  /* Slightly reduced height */
+}
+
+.loginBtn,
+.signUpBtn {
+  margin-top: 0.3vmax;  /* Reduced margin */
+  padding: 0.5vmax;  /* Reduced padding */
+}
+
+/* Adjust mobile spacing */
+@media screen and (max-width: 600px) {
+  .loginForm,
+  .signUpForm {
+    padding: 3vmax;
+    gap: 1vmax;
+  }
+}
+
 .loginForm > div > input,
 .signUpForm > div > input {
-  padding: 1vmax 4vmax;
+  padding: 0.8vmax 3.5vmax;  /* Reduced padding */
+  padding-right: 1vmax;
+  width: 100%;
+  height: 2.5vmax;  /* Added fixed height */
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font: 400 0.9vmax "Poppins";  /* Slightly reduced font size */
+}
+
+#registerImage {
+  margin: 0.5vmax 0;
+  height: 2.5vmax;
+}
+
+#registerImage > input::file-selector-button {
+  height: 2.5vmax;  /* Matched height with other inputs */
+  font: 400 0.8vmax "Poppins";
+  padding: 0 0.8vmax;
+}
+
+.loginBtn,
+.signUpBtn {
+  padding: 0.7vmax;  /* Reduced padding */
+  margin-top: 0.5vmax;  /* Reduced margin */
+  height: 2.5vmax;  /* Fixed height */
+  font: 500 0.9vmax "Poppins";
+}
+
+.login_signUp_toggle {
+  display: flex;
+  height: 4vmax;
+  margin-bottom: 2vmax;
+  background: rgba(251, 180, 27, 0.05);
+}
+
+.loginForm,
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax 3vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.loginForm > div,
+.signUpForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 1vmax 0;
+  position: relative;
+}
+
+.loginForm > div > input,
+.signUpForm > div > input {
+  padding: 1.2vmax 4vmax;
   padding-right: 1vmax;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.267);
-  border-radius: 4px;
-  font: 300 0.9vmax cursive;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font: 400 1vmax "Poppins";
   outline: none;
+  transition: all 0.3s ease;
+  background: rgba(251, 180, 27, 0.02);
+}
+
+.loginBtn,
+.signUpBtn {
+  border: none;
+  background-color: #f9af0f;
+  color: white;
+  font: 500 1vmax "Poppins";
+  width: 100%;
+  padding: 1vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(251, 180, 27, 0.3);
+  margin-top: 1vmax;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Update mobile styles */
+@media screen and (max-width: 600px) {
+  .LoginSignUpBox {
+    width: 90vw;
+    height: auto;
+    min-height: 95vh;
+    margin: 2vmax auto;
+  }
+
+  .login_signUp_toggle {
+    height: 7vmax;
+    margin-bottom: 4vmax;
+  }
+
+  .login_signUp_toggle > p {
+    font: 500 2.5vmax "Poppins";
+  }
+
+  .loginForm > div > input,
+  .signUpForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 400 2vmax "Poppins";
+  }
+
+  .loginBtn,
+  .signUpBtn {
+    font: 500 2.2vmax "Poppins";
+    padding: 2vmax;
+  }
+}
+
+.login_signUp_toggle > p {
+  color: rgba(0, 0, 0, 0.678);
+  font: 500 1vmax "Poppins";
+  letter-spacing: 0.5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.login_signUp_toggle > p:hover {
+  color: #fbb41b;
+}
+
+.LoginSignUpBox > div > button {
+  background-color: #f9ad08;
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+}
+
+.signUpForm {
+  transform: translateY(-100%) translateX(-100vmax);
 }
 
 .loginForm > div > svg,
@@ -113,7 +249,7 @@
   height: 5vh;
   border: none;
   margin: 0%;
-  font: 400 0.8vmax cursive;
+  font: 400 0.8vmax "Poppins";
   transition: all 0.5s;
   padding: 0 1vmax;
   color: rgba(0, 0, 0, 0.623);
@@ -127,9 +263,9 @@
 .loginBtn,
 .signUpBtn {
   border: none;
-  background-color: tomato;
+  background-color: #d89606;
   color: white;
-  font: 300 0.9vmax "Roboto";
+  font: 300 0.9vmax "Poppins";
   width: 100%;
   padding: 0.8vmax;
   cursor: pointer;
